@@ -3,16 +3,40 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./pages/Main";
+import Currencies from "./pages/Currencies";
+import Price from "./pages/Price";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        // '/'           -> render Main Page
+        path: "/",
+        element: <Main />,
+      },
+      {
+        // '/currencies' -> render Currencies Page
+        path: "/currencies",
+        element: <Currencies />,
+      },
+      {
+        // '/price'      -> render Price Page
+        path: "/price/:id",
+        element: <Price />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// '/'           -> render Main Page
-// '/currencies' -> render Currencies Page
-// '/price'      -> render Price Page
-
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
