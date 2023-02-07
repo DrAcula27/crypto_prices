@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./pages/Main";
 import Currencies from "./pages/Currencies";
-import Price from "./pages/Price";
+import Coin from "./pages/Coin";
 
 const router = createBrowserRouter([
   {
@@ -24,9 +24,9 @@ const router = createBrowserRouter([
         element: <Currencies />,
       },
       {
-        // '/price'      -> render Price Page
-        path: "/price/:id",
-        element: <Price />,
+        // '/coin'      -> render Coin Page
+        path: "/coin/:symbol",
+        element: <Coin />,
       },
     ],
   },

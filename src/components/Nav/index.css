@@ -1,0 +1,25 @@
+#navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em 0;
+  background-color: palegoldenrod;
+  border-bottom: 2px solid goldenrod;
+}
+
+#navbar a button {
+  color: green;
+  background-color: rgba(0, 255, 0, 0.5);
+  font-weight: bold;
+  font-size: 0.75em;
+  border: 2px solid goldenrod;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+}
+
+#navbar a button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 200, 0, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
