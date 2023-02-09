@@ -1,0 +1,19 @@
+#coin-ul {
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+}
+
+#coin-ul li {
+  margin: 0.5em 0;
+  padding: 0.25em 0.2em;
+  list-style-type: none;
+  background-color: palegoldenrod;
+  border: 2px solid goldenrod;
+  border-radius: 0.25em;
+}
+
+#coin-ul li:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
